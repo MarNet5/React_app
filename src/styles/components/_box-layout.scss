@@ -9,7 +9,7 @@
 }
 
 .box-layout__box {
-    background: fade-out($color: (white), $amount: .15);
+    background: fade-out($color: ($light-pink), $amount: .15);
     border-radius: 3px;
     padding: $l-size $m-size;
     text-align: center;
@@ -20,5 +20,11 @@
 .box-layout__title {
    margin: 0 0 $m-size 0;
    line-height: 1;
+   font-family: 'Mali';
     
 }
+
+.box-layout__subtitle {
+    font-family: 'Mali';
+     
+ }

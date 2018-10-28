@@ -1,5 +1,5 @@
 .button {
-    background: $blue;
+    background: $pink;
     border: none;
     color: white;
     display: inline-block;
@@ -9,6 +9,7 @@
     margin: $xs-size;
     padding: $s-size;
     text-decoration: none;
+    font-family: 'Mali';
 }
 
 .button--link {
