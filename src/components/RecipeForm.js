@@ -22,6 +22,7 @@ export default class RecipeForm extends React.Component {
 
     this.state = {
         description: props.recipe ? props.recipe.description : '',
+        image: props.recipe ? props.recipe.image : '',
         note: props.recipe ? props.recipe.note : '',
         ingredients: props.recipe ? props.recipe.ingredients : '',
         directions: props.recipe ? props.recipe.directions : '',
@@ -34,6 +35,11 @@ export default class RecipeForm extends React.Component {
     onDescriptionChange = (e) => {
         const description = e.target.value;
         this.setState(() => ({ description }))
+    };
+
+    onImageChange = (e) => {
+        const image = e.target.value;
+        this.setState(() => ({ image }))
     };
 
     onNoteChange = (e) => {
@@ -80,6 +86,7 @@ export default class RecipeForm extends React.Component {
             this.setState(() => ({ error: ''}))
             this.props.onSubmit({
                 description: this.state.description,
+                image: this.state.image,
                 ingredients: this.state.ingredients,
                 directions: this.state.directions,
                 //amount: parseFloat(this.state.amount, 10) * 100,
@@ -102,6 +109,14 @@ export default class RecipeForm extends React.Component {
                    value={this.state.description}
                    onChange={this.onDescriptionChange}
                    />
+                <input
+                type="text"
+                placeholder="image url"
+                className="text-input"
+                value={this.state.image}
+                onChange={this.onImageChange}
+                />
+
                    {/* <input 
                    type="text"
                    placeholder="Amount"
@@ -111,14 +126,14 @@ export default class RecipeForm extends React.Component {
                    /> */}
                    <textarea
                     className="textarea"
-                   placeholder="Add an ingredients"
+                   placeholder="Ingredients"
                    value={this.state.ingredients}
                    onChange={this.onIngredientsChange}
                    >
                    </textarea>
                    <textarea
                     className="textarea"
-                   placeholder="Add directions"
+                   placeholder="Directions"
                    value={this.state.directions}
                    onChange={this.onDirectionsChange}
                    >

@@ -26,11 +26,11 @@ export class RecipeListFilters extends React.Component {
   //   }
   // };
 
-  onSortChange = (e) => {
-    if (e.target.value === 'date') {
-      this.props.sortByDate();
-    } 
-  };
+  // onSortChange = (e) => {
+  //   if (e.target.value === 'date') {
+  //     this.props.sortByDate();
+  //   } 
+  // };
 
   render() {
     return (
@@ -46,14 +46,14 @@ export class RecipeListFilters extends React.Component {
         />
         </div>
         <div className="input-group__item">
-        <select
+        {/* <select
           className="select"
           value={this.props.filters.sortBy}
           onChange={this.onSortChange}
         >
           <option value="date">Date</option>
-          {/* <option value="amount">Amount</option> */}
-        </select>
+          <option value="amount">Amount</option>
+        </select> */}
         </div>
         <div className="input-group__item">
         <DateRangePicker

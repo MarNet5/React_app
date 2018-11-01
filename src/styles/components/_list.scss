@@ -1,5 +1,5 @@
 .list-header {
-    background: $off-white;
+    background: $off-pink;
     border: 1px solid darken($off-white, 7%);
     color: $grey;
     display: flex;
@@ -11,6 +11,7 @@
     margin-bottom: $m-size;
     @media (min-width: $desktop-breakpoint) {
         margin-bottom: $l-size;
+        // background: $off-pink;
     }
 }
 
